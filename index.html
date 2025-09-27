@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Simple Tabs</title>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Tabs UI</h1>
+    </header>
+    <main>
+      <div class="card" role="region" aria-label="Settings">
+        <div class="tabs" role="tablist" aria-label="Settings tabs">
+          <ul class="tabs-list" id="tabs">
+            <li
+              id="tab-1"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              tabindex="0"
+            >
+              General
+            </li>
+            <li
+              id="tab-2"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              tabindex="-1"
+            >
+              Miscellaneous
+            </li>
+            <li
+              id="tab-3"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-3"
+              tabindex="-1"
+            >
+              Security
+            </li>
+            <li
+              id="tab-4"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-4"
+              tabindex="-1"
+            >
+              Advanced
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <!-- <h2 class="hero">
+            Clicking each tab should hide the content of the other tab and show
+            the content of clicked tab. By default, enable the first tab.
+          </h2>
+          <p class="lead">
+            This demo shows how to create a tabbed UI with a large content
+            panel. Use your keyboard or mouse to switch tabs.
+          </p> -->
+          <section
+            id="panel-1"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-1"
+          >
+            <div class="panelbox">Tab 1 content.</div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+          </section>
+          <section
+            id="panel-2"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-2"
+          >
+            <div class="panelbox">Tab 1 content.</div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+          </section>
+          <section
+            id="panel-3"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-3"
+          >
+            <div class="panelbox">Tab 1 content.</div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+          </section>
+          <section
+            id="panel-4"
+            class="panel"
+            role="tabpanel"
+            aria-labelledby="tab-4"
+          >
+            <div class="panelbox">Tab 1 content.</div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+            <div class="panelbox"></div>
+          </section>
+          <p class="footer">
+            Add some dummy content or just add a simple text showing the tab
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
