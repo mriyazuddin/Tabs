@@ -16,6 +16,6 @@ https://roadmap.sh/projects/simple-tabs
 
 ```
 bash
-git clone https://github.com/<your-username>/tabs
+git clone https://github.com/mriyazuddin/tabs
 cd tabs
 ```

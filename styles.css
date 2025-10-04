@@ -1,14 +1,4 @@
-:root {
-  --card-pad: 32px;
-  --card-radius: 18px;
-  --border-color: #222;
-  --muted: #9b9b9b;
-  --accent: #000;
-  --bg: #fff;
-  --max-width: 1300px;
-}
 body {
-  margin: 24px;
   font-family:
     system-ui,
     -apple-system,
@@ -21,81 +11,61 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  background: var(--bg);
-  color: #111;
-  /* --webkit-font-smoothing: antialiased; */
-  /* --moz-osx-font-smoothing: grayscale; */
+  font-size: 18px;
+  color: #eee;
+  background: #555;
 }
-.card {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--card-pad);
-  border: 4px solid var(--border-color);
-  border-radius: 20px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.02) inset;
-}
-.tabs {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  margin: 8px 0 28px 0;
-  flex-wrap: wrap;
-}
-
-.tabs-list {
-  display: flex;
-  gap: 28px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  align-items: center;
-}
-.tabs-list button {
-  -webkit-tap-highlight-color: transparent;
-  appearance: none;
-  background: transparent;
-  border: none;
-  padding: 8px 6px;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--muted);
-  cursor: pointer;
-  position: relative;
-  outline: none;
-}
-.tabs-list button[aria-selected="true"] {
-  color: var(--accent);
-}
-.tabs-list button[aria-selected="true"]::after {
-  content: "";
-  position: absolute;
-  top: 35px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  bottom: -10px;
-  margin: 0 auto;
-  width: 80%;
-  background: var(--accent);
-  border-radius: 4px;
-}
-.content {
-  margin-top: 8px;
-}
-.panel-tabls {
-  background: #000;
-  color: #fff;
-  border-radius: 22px;
-  padding: 48px 32px;
-  min-height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  margin: 6px 4px 36px 4px;
+h1 {
   text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
 }
-.footer {
-  font-size: 26px;
-  margin: 6px 4px;
+p {
+  margin: 20px 0;
+}
+main section button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 24px;
+}
+#tab-container {
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #ccff00;
+}
+#tab-container:hover {
+  position: relative;
+  z-index: 1000;
+  box-shadow: 5px 5px 20px #888;
+}
+.active-panel {
+  display: block;
+}
+.inactive-panel {
+  display: none;
+}
+.tab-button {
+  border: none;
+  background: none;
+  position: relative;
+  display: inline-block;
+}
+.btn-active {
+  color: #fff;
+  z-index: 1000;
+  border: 1px solid #fff;
+  background-color: #000;
+  border-radius: 5px;
+}
+.btn-inactive {
+  color: #bbb;
+  z-index: 500;
+}
+.tab-button:focus {
+  outline: 2px solid #ccff00;
+  outline-offset: 2px;
 }

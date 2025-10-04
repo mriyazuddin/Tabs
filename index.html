@@ -7,109 +7,137 @@
     <title>Simple Tabs</title>
   </head>
   <body>
-    <header>
-      <h1>Simple Tabs UI</h1>
-    </header>
+    <header><h1>Simple Tabs UI</h1></header>
     <main>
-      <div class="card" role="region" aria-label="Settings">
-        <div class="tabs" role="tablist" aria-label="Settings tabs">
-          <ul class="tabs-list" id="tabs">
-            <li
-              id="tab-1"
-              role="tab"
-              aria-selected="true"
-              aria-controls="panel-1"
-              tabindex="0"
-            >
-              General
-            </li>
-            <li
-              id="tab-2"
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-2"
-              tabindex="-1"
-            >
-              Miscellaneous
-            </li>
-            <li
-              id="tab-3"
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-3"
-              tabindex="-1"
-            >
-              Security
-            </li>
-            <li
-              id="tab-4"
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-4"
-              tabindex="-1"
-            >
-              Advanced
-            </li>
-          </ul>
-        </div>
-        <div class="content">
-          <!-- <h2 class="hero">
-            Clicking each tab should hide the content of the other tab and show
-            the content of clicked tab. By default, enable the first tab.
-          </h2>
-          <p class="lead">
-            This demo shows how to create a tabbed UI with a large content
-            panel. Use your keyboard or mouse to switch tabs.
-          </p> -->
-          <section
+      <div id="tab-container">
+        <section id="btn-container" role="tablist">
+          <button
+            id="btn1"
+            class="tab-button btn-active"
+            data-target="panel-1"
+            role="tab"
+            aria-controls="panel-1"
+            aria-selected="true"
+            tabindex="0"
+          >
+            Tab 1
+          </button>
+          <button
+            id="btn2"
+            class="tab-button btn-inactive"
+            data-target="panel-2"
+            role="tab"
+            aria-controls="panel-2"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Tab 2
+          </button>
+          <button
+            id="btn3"
+            class="tab-button btn-inactive"
+            data-target="panel-3"
+            role="tab"
+            aria-controls="panel-3"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Tab 3
+          </button>
+          <button
+            id="btn4"
+            class="tab-button btn-inactive"
+            data-target="panel-4"
+            role="tab"
+            aria-controls="panel-4"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Tab 4
+          </button>
+        </section>
+        <hr />
+        <section id="panel-container">
+          <article
             id="panel-1"
-            class="panel"
+            class="active-panel"
             role="tabpanel"
-            aria-labelledby="tab-1"
+            tabindex="0"
+            aria-labelledby="btn1"
           >
-            <div class="panelbox">Tab 1 content.</div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-          </section>
-          <section
+            <p>
+              This is tab 1 content. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Facere omnis minima ipsum optio molestias atque
+              repudiandae eum, aspernatur, distinctio minus vel? Eius
+              consequatur pariatur eum et quod, aliquam rem libero? Odio nulla
+              possimus sapiente! Non reiciendis molestiae doloremque suscipit ad
+              sit labore commodi vitae hic nulla ea perspiciatis aspernatur
+              voluptates quaerat dolore nostrum est iusto voluptas deleniti, ut
+              quos impedit.
+            </p>
+          </article>
+          <article
             id="panel-2"
-            class="panel"
+            class="inactive-panel"
             role="tabpanel"
-            aria-labelledby="tab-2"
+            tabindex="-1"
+            aria-labelledby="btn2"
+            inert
           >
-            <div class="panelbox">Tab 1 content.</div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-          </section>
-          <section
+            <p>
+              This is tab 2 content. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Doloribus omnis ipsam amet eos sunt numquam
+              aliquam porro sint, dolores explicabo, mollitia, voluptas qui
+              veniam iusto. Dolorum provident porro animi dicta. Aliquid, hic,
+              aut molestiae, omnis quam maxime deserunt nemo iusto nostrum
+              tempora dolorem. Tempore reprehenderit ducimus minima debitis,
+              error aliquam perspiciatis enim ipsam eum tempora velit beatae
+              officiis? Error, tenetur!
+            </p>
+          </article>
+          <article
             id="panel-3"
-            class="panel"
+            class="inactive-panel"
             role="tabpanel"
-            aria-labelledby="tab-3"
+            tabindex="-1"
+            aria-labelledby="btn3"
+            inert
           >
-            <div class="panelbox">Tab 1 content.</div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-          </section>
-          <section
+            <p>
+              This is tab 3 content. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Rem aliquam expedita voluptatibus, tenetur
+              molestias, eveniet, ut eligendi est voluptate similique quasi
+              numquam possimus omnis voluptatum reprehenderit libero ratione
+              perferendis iste? Obcaecati magni porro quaerat fugiat modi
+              veritatis nostrum minus tempora, non quam alias dicta corrupti
+              perferendis. Mollitia sint ut minima molestiae dolore architecto
+              delectus eum. Veritatis dolore aperiam ducimus deserunt?
+            </p>
+          </article>
+          <article
             id="panel-4"
-            class="panel"
+            class="inactive-panel"
             role="tabpanel"
-            aria-labelledby="tab-4"
+            tabindex="-1"
+            aria-labelledby="btn4"
+            inert
           >
-            <div class="panelbox">Tab 1 content.</div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-            <div class="panelbox"></div>
-          </section>
-          <p class="footer">
-            Add some dummy content or just add a simple text showing the tab
-          </p>
-        </div>
+            <p>
+              This is tab 4 content. Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Veniam cumque rem autem dolor provident soluta
+              earum quasi consequatur minima nulla. Sapiente blanditiis, magni
+              asperiores hic repudiandae fugit similique odit impedit.
+              Aspernatur sed unde soluta eum quae sit nemo eius optio neque,
+              esse, et eos provident, ipsum laudantium. Enim, obcaecati nulla
+              sequi temporibus veniam quasi perferendis, est quibusdam
+              architecto debitis atque.
+            </p>
+          </article>
+        </section>
       </div>
     </main>
+
+    <script src="https://unpkg.com/wicg-inert/dist/inert.min.js"></script>
+    <script src="simple-tabs.js"></script>
   </body>
 </html>
